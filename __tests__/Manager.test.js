@@ -1,9 +1,9 @@
 // const { default: test } = require('node:test');
 const Manager = require('../lib/manager');
-const manager = new Manager('julia','3518289','juliafritsch04@gmail.com', '123');
+const manager = new Manager('julia','1','juliafritsch04@gmail.com', '123');
 test('test to get constructor values from manager', () => {
     expect(manager.name).toBe('julia');
-    expect(manager.id).toBe('3518289');
+    expect(manager.id).toBe('1');
     expect(manager.email).toBe('juliafritsch04@gmail.com');
     expect(manager.officeNo).toBe('123');
 }); 
@@ -14,7 +14,7 @@ test('test for return of getName()', () => {
 });
 // ID test
 test('test for return of getId()', () => {
-    expect(manager.getId()).toBe('3518289');
+    expect(manager.getId()).toBe('1');
 });
 // Email test
 test('test for return of getEmail()', () => {
