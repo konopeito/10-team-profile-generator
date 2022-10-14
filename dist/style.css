@@ -1,36 +1,63 @@
+
 .team-heading {
-    background-color: #e84855;
-    color: #ffffff;
+    font-family: 'Alegreya Sans SC';
+    background-color: #536d5e;
+    border: #557c65 2px solid;
+    color: #fbfffc;
   }
   
   .team-area {
     max-width: 1000px;
     margin: 3em auto;
     flex-wrap: wrap;
+    
   }
-  
+  h2 {
+    font-weight: 400;
+    border: #808e86 2px solid;
+    background-color: #e6f4e8;
+    padding: 5px;
+    width: 87px;
+    color: rgb(99, 125, 111);
+    text-align: center;
+  }
+  h3 {
+    font-weight: 400;
+border-bottom: #fbfffc dashed 2px;
+padding: 5px;
+font-size: 28px;
+  }
+  .list-group-item
+    a:hover {
+        color: rgb(43, 134, 55);
+        text-decoration: underline;
+    }
+
   .employee-card {
+    font-family: 'Alegreya Sans SC';
+    font-size: 20px;
     margin: 1em;
-    max-width: 280px;
+    max-width: 350px;
     width: 90%;
     min-height: 22rem;
-    background-color: #007bff;
+    background-color: #90ba8e;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    border: none;
+    box-shadow: 4px 4px 8px rgba(46, 71, 52, 0.7);
   }
   
   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f6f7f8;
+    background-color: #e7fbed;
+    color: #3d7a3a;
+    t
   }
   
   .list-group-item {
-    color: #000000;
+    color: #5c6e5d;
     text-decoration: none;
   }
