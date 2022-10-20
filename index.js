@@ -1,7 +1,7 @@
 // node modules
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateTeam = require("./src/page-template.js");
+const generateTeam = require("./src/template.js");
 
 // lib modules
 const Engineer = require("./lib/Engineer");
@@ -55,7 +55,7 @@ const questions = async () => {
             answers.name,
             answers.id,
             answers.email,
-            managerAns.officeNumber
+            managerAns.officeNo
           );
           newStaffMemberData.push(newManager);
           
