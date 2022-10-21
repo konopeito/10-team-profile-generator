@@ -1,8 +1,9 @@
 // create the team
 const generateTeam = (team) => {
+    const html = [];
     // create the manager html
     const generateManager = (manager) => {
-      return `
+      let managerHtml = `
           <div class="card employee-card">
           <div class="card-header">
               <h2 class="card-title">${manager.getName()}</h2>
@@ -17,11 +18,12 @@ const generateTeam = (team) => {
           </div>
       </div>
           `;
-    };
+          html.push(managerHtml);
+    }
   
     // create the html for engineers
     const generateEngineer = (engineer) => {
-      return `
+      let engineerHtml = `
           <div class="card employee-card">
       <div class="card-header">
           <h2 class="card-title">${engineer.getName()}</h2>
@@ -36,11 +38,12 @@ const generateTeam = (team) => {
       </div>
   </div>
           `;
-    };
+          html.push(engineerHtml);
+    }
   
     // create the html for interns
     const generateIntern = (intern) => {
-      return `
+      let internHtml = `
           <div class="card employee-card">
       <div class="card-header">
           <h2 class="card-title">${intern.getName()}</h2>
@@ -55,33 +58,28 @@ const generateTeam = (team) => {
       </div>
   </div>
           `;
-    };
-  
-    const html = [];
-  
-    html.push(
-      team
-        .filter((employee) => employee.getRole() === "Manager")
-        .map((manager) => generateManager(manager))
-    );
-    html.push(
-      team
-        .filter((employee) => employee.getRole() === "Engineer")
-        .map((engineer) => generateEngineer(engineer))
-        .join("")
-    );
-    html.push(
-      team
-        .filter((employee) => employee.getRole() === "Intern")
-        .map((intern) => generateIntern(intern))
-        .join("")
-    );
-  
-    return html.join("");
-  };
-  
+          html.push(internHtml);
+    }
+   // create a loop for all of the employees
+   for (let i = 0; i < team.length; i++) {
+    if (team[i].getRole() === "Manager") {
+        generateManager(team[i]);
+    }
+    if (team[i].getRole() === "Engineer") {
+        generateEngineer(team[i]);
+    }
+    if (team[i].getRole() === "Intern") {
+        generateIntern(team[i]);
+    }
+}
+
+// join the HTML blocks
+return html.join('');
+}
   // export function to generate entire page
-  module.exports = (team) => {
+
+module.exports = team => {
+
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -113,4 +111,4 @@ const generateTeam = (team) => {
 </body>
 </html>
     `;
-};
+}

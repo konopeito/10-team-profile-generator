@@ -55,7 +55,7 @@ const questions = async () => {
             answers.name,
             answers.id,
             answers.email,
-            managerAns.officeNo
+            managerAns.officeNumber
           );
           newStaffMemberData.push(newManager);
           
@@ -124,7 +124,7 @@ promptQuestions();
 function createTeam () {
   console.log("new guy", newStaffMemberData)
   fs.writeFileSync(
-    "./output/index.html",
+    "./dist/index.html",
     generateTeam(newStaffMemberData),
     "utf-8"
   );

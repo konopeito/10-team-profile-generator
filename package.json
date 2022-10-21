@@ -1,22 +1,29 @@
 {
-  "name": "team-profile-generate",
+  "name": "team-profile-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JFritsch04/10-team-profile-generator.git#main"
+    "url": "https://github.com/JFritsch04/10-team-profile-generator/tree/main"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JFritsch04/10-team-profile-generator/issues"
   },
-  "homepage": "https://github.com/JFritsch04/10-team-profile-generator/tree/main#readme",
+  "homepage": "https://github.com/JFritsch04/10-team-profile-generator/blob/main/README.md",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.2.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
   }
 }
