@@ -42,7 +42,8 @@
 
 
 ## Project Preview
-(Project video & Screenshot here
+![https://github.com/JFritsch04/10-team-profile-generator/blob/main/assets/mockup.png]()
+https://github.com/JFritsch04/10-team-profile-generator/blob/main/assets/video-preview.webm
 
 
 ### Installation
