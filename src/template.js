@@ -3,7 +3,7 @@ const generateTeam = (team) => {
     const html = [];
     // create the manager html
     const generateManager = (manager) => {
-      let managerHtml = `
+        let managerHtml = `
           <div class="card employee-card">
           <div class="card-header">
               <h2 class="card-title">${manager.getName()}</h2>
@@ -18,16 +18,16 @@ const generateTeam = (team) => {
           </div>
       </div>
           `;
-          html.push(managerHtml);
+        html.push(managerHtml);
     }
-  
+
     // create the html for engineers
     const generateEngineer = (engineer) => {
-      let engineerHtml = `
+        let engineerHtml = `
           <div class="card employee-card">
       <div class="card-header">
           <h2 class="card-title">${engineer.getName()}</h2>
-          <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+          <h3 class="card-title"><i class="fa-solid fa-pen-ruler"></i>${engineer.getRole()}</h3>
       </div>
       <div class="card-body">
           <ul class="list-group">
@@ -38,12 +38,12 @@ const generateTeam = (team) => {
       </div>
   </div>
           `;
-          html.push(engineerHtml);
+        html.push(engineerHtml);
     }
-  
+
     // create the html for interns
     const generateIntern = (intern) => {
-      let internHtml = `
+        let internHtml = `
           <div class="card employee-card">
       <div class="card-header">
           <h2 class="card-title">${intern.getName()}</h2>
@@ -58,25 +58,25 @@ const generateTeam = (team) => {
       </div>
   </div>
           `;
-          html.push(internHtml);
+        html.push(internHtml);
     }
-   // create a loop for all of the employees
-   for (let i = 0; i < team.length; i++) {
-    if (team[i].getRole() === "Manager") {
-        generateManager(team[i]);
+    // create a loop for all of the employees
+    for (let i = 0; i < team.length; i++) {
+        if (team[i].getRole() === "Manager") {
+            generateManager(team[i]);
+        }
+        if (team[i].getRole() === "Engineer") {
+            generateEngineer(team[i]);
+        }
+        if (team[i].getRole() === "Intern") {
+            generateIntern(team[i]);
+        }
     }
-    if (team[i].getRole() === "Engineer") {
-        generateEngineer(team[i]);
-    }
-    if (team[i].getRole() === "Intern") {
-        generateIntern(team[i]);
-    }
-}
 
-// join the HTML blocks
-return html.join('');
+    // join the HTML blocks
+    return html.join('');
 }
-  // export function to generate entire page
+// export function to generate entire page
 
 module.exports = team => {
 
@@ -96,9 +96,9 @@ module.exports = team => {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center">My Team</h1>
-            </div>
+        <div class="col-12 jumbotron mb-3 team-heading">
+        <h1 class="text-center">My Team</h1>
+         </div>
         </div>
     </div>
     <div class="container">
